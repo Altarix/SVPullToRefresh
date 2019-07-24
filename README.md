@@ -8,6 +8,12 @@ These UIScrollView categories makes it super easy to add pull-to-refresh and inf
 - (void)addInfiniteScrollingWithActionHandler:(void (^)(void))actionHandler;
 ```
 
+## Мои исправления
+Была исправлена редкая ошибка:
+1. Загружаем первую страницу с небольшим числом элементов. Данных должно быть недостаточно для заполнения экрана целиком.
+2. Обновляем данные с помощью RefreshControll свайпом сверху-вниз.
+Вместе с обновлением данных, в редких случаях происходил лишний вызов метода загрузки следующей страницы.
+
 ## Installation
 
 ### From CocoaPods
